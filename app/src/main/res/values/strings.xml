@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Tip_Calculator</string>
+    <string name="editText_billAmountHint">Enter Amount</string>
+    <string name="buttonTitle">Round bill?</string>
+    <string name="textView_Percent">15%</string>
+    <string name="radioButton1text">No</string>
+    <string name="radioButton2text">Tip only</string>
+    <string name="radioButton3text">Total only</string>
+    <string name="TipLabel">Tip</string>
+    <string name="TotalLabel">Total</string>
+    <string name="calcButtonTitle">Calculate</string>
+    <string name="EachLabel">Each</string>
+    <string name="shareTitle">Share</string>
+    <string name="helpTitle">Help</string>
+    <string-array name="spinnerValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>

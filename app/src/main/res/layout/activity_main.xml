@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="@dimen/padding_textView_default">
+
+    <EditText
+        android:id="@+id/editText_BillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/editText_Color"
+        android:ems="10"
+        android:hint="@string/editText_billAmountHint"
+        android:inputType="number"
+        android:maxLength="6"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_BillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/editText_Color"
+        android:layout_gravity="fill_horizontal"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold"
+        android:hint="@string/editText_billAmountHint"
+        android:labelFor="@+id/editText_BillAmount"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView_Percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_BillAmount"
+        android:padding="@dimen/padding_textView_default"
+        android:text="@string/textView_Percent"
+        android:layout_alignLeft="@+id/textView_TotalLabel"
+        android:layout_alignRight="@+id/textView_TotalLabel"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_BillAmount"
+        android:layout_toRightOf="@id/textView_Percent"
+        android:max="100"
+        android:padding="@dimen/padding_textView_default" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignLeft="@+id/textView_TotalLabel"
+        android:layout_alignRight="@+id/textView_TotalLabel"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:layout_toRightOf="@+id/spinner"
+        android:checkedButton="@+id/radioButton1">
+
+        <TextView
+            android:id="@+id/textView_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonTitle"
+            android:textSize="@dimen/buttonTextSize"
+            />
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioButton1text"
+            android:textSize="@dimen/buttonTextSize" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioButton2text"
+            android:textSize="@dimen/buttonTextSize" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radioButton3text"
+            android:textSize="@dimen/buttonTextSize" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_TipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:text="@string/TipLabel"
+        android:padding="@dimen/padding_textView_default"
+        android:textSize="@dimen/buttonTextSize"
+        android:layout_alignLeft="@+id/textView_TotalLabel"
+        android:layout_alignRight="@+id/textView_TotalLabel"/>
+
+    <TextView
+        android:id="@+id/textView_TipAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toRightOf="@+id/textView_TipLabel"
+        android:background="@color/Amount_Color"
+        android:layout_gravity="fill_horizontal"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView_TotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_TipLabel"
+        android:text="@string/TotalLabel"
+        android:padding="@dimen/padding_textView_default"
+        android:textSize="@dimen/buttonTextSize"/>
+
+    <TextView
+        android:id="@+id/textView_TotalAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_TipLabel"
+        android:layout_toRightOf="@+id/textView_TotalLabel"
+        android:background="@color/Amount_Color"
+        android:layout_gravity="fill_horizontal"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/textView_EachLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_TotalLabel"
+        android:text="@string/EachLabel"
+        android:padding="@dimen/padding_textView_default"
+        android:textSize="@dimen/buttonTextSize"
+        android:layout_alignLeft="@+id/textView_TotalLabel"
+        android:layout_alignRight="@+id/textView_TotalLabel"/>
+
+    <TextView
+        android:id="@+id/textView_EachAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_TotalLabel"
+        android:layout_toRightOf="@+id/textView_EachLabel"
+        android:background="@color/Amount_Color"
+        android:layout_gravity="fill_horizontal"
+        android:padding="@dimen/padding_textView_default"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calcButtonTitle"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="buttonClicked"/>
+</RelativeLayout>
